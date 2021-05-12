@@ -7,8 +7,8 @@ The Program is creating an Invitation-Code with the associated Application.
 ## Building
 
 ### Requirements
-1. dotNET 4.5+
-2. Newtonsoft.Json-Package
+- dotNET 4.5+
+- Newtonsoft.Json-Package
 
 1. Clone the latest Repository of the master Branch
 ```console
