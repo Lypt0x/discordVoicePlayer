@@ -59,8 +59,8 @@ namespace discordVoicePlayer.Player
                                                             $"{DiscordEndpoint.EndpointChannels}/" +
                                                             $"{channelSnowflake}" +
                                                             $"{DiscordEndpoint.EndpointInvites}", stringContent);
-                
-            if (!(this.IsResponseValid(response.StatusCode)))
+            
+            if (!(response.IsSuccessStatusCode))
                 return $"invalid - status: {response.StatusCode}";
              
             var jObject = JObject.Parse(await response.Content.ReadAsStringAsync());
@@ -84,13 +84,12 @@ namespace discordVoicePlayer.Player
             var response = await this._httpClient.GetAsync($"{DiscordEndpoint.EndpointUri}" +
                                                            $"{DiscordEndpoint.EndpointChannels}/" +
                                                            $"{channelSnowflake}");
-            if (!(this.IsResponseValid(response.StatusCode)))
+            if (!(response.IsSuccessStatusCode))
                 return false;
 
             var jObject = JObject.Parse(await response.Content.ReadAsStringAsync());
             return jObject.HasValues && jObject["type"]?.ToObject<int>() == 2;
         }
 
-        private bool IsResponseValid(HttpStatusCode statusCode) => statusCode.Equals(HttpStatusCode.OK);
     }
 }
