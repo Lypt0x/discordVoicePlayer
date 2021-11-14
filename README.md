@@ -19,26 +19,6 @@ The Program is creating an Invitation-Code with the associated Application.
 3. Install NuGet-Package of **Newtonsoft.Json**.
 4. Done! Now you can build it yourself.
 
-## Using selfmade [Bot](https://discord.com/oauth2/authorize?client_id=769749490915606562&scope=bot&permissions=3073)
-You don't want to create a Bot with those features?
-Sure! Just use this Bot to create the Invitation-Applications.
-
-### Using
-- Prefix: `v!`
-- Help: `v!help`
-- Commands:
-- - `v!betray <voiceChannel>`
-- - `v!fishington <voiceChannel>`
-- - `v!pokernight <voiceChannel>`
-- - `v!youtube <voiceChannel>`
-
-### Permissions needed by the Bot
-- **Create Invite** to create the Invites of the Voice-Channel
-- **Read Messages** to read the Messages of the Executor
-- **Send Messages** to respond to the Executor
-
-Invitation to the Bot called **VoicePlayer** is [here](https://discord.com/oauth2/authorize?client_id=769749490915606562&scope=bot&permissions=3073)
-
 ## By the way
 Leave a Star at this Repository if you want!
 
